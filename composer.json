@@ -18,6 +18,12 @@
         
     },
 
+    "autoload": {
+        "classmap": [
+            "public/core/ckfinder_php5.php"
+        ]
+    },
+
     "provide": {
       
     }
