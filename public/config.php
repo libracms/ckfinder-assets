@@ -31,7 +31,15 @@ function CheckAuthentication()
 	// forget to add session_start() at the top of this file.
 
 	//return true;
-    session_start();
+
+    $cwd = getcwd();
+    chdir('../../../../../../../');
+    require 'init_autoloader.php';
+    //\Zend\Mvc\Application::init(require 'config/application.config.php');
+    $session = new \Zend\Session\SessionManager();
+    $session->start();
+    chdir($cwd);
+    //session_start();
 	return isset($_SESSION['IsAuthorized']) && $_SESSION['IsAuthorized'];
 }
 
