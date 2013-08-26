@@ -11,5 +11,11 @@
 
     "require": {
         "libra/libra-assets-installer": "2.*"
+    },
+
+    "autoload": {
+        "classmap": [
+            "public/core/ckfinder_php5.php"
+        ]
     }
 }
